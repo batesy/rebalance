@@ -24,7 +24,7 @@ Run `node rebalance.js`
 Having been using Node and Angular in my current job, I decided to implement this solution in Javascript. My experience with Node is limited, so I decided to also have the script fetch live results in order to gain a better grasp on how to deal with it's asynchronous nature.
 
 ##Notes
-While this module meets the basic requirements, it's not perfect. For example, with the given portfolio we end up with $30 that would not be reinvested - that's enough for 1 addition AAPL share and 1 additional TSLA share. The next feature I would build would determine the optimal investment of any leftover funds once we've met our allocation for each stock.
+While this module meets the basic requirements, it's not perfect. For example, with the given portfolio we end up with $30 that would not be reinvested - that's enough for 1 additional AAPL share and 1 additional TSLA share. The next feature I would build would determine the optimal investment of any leftover funds once we've met our allocation for each stock.
 
 In order to accomplish this I would likely start by refactoring the getAdvice() function, which is already borderline doing too much.
 
