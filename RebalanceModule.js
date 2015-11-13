@@ -1,10 +1,36 @@
 'use strict';
 
+var request = require('request');
+
 var RebalancePortfolio = {
   advice: [],
 
-  init: function(portfolio) {
-    this.rebalancePortfolio(portfolio);
+  init: function(portfolio, options) {
+    if (options.getLiveQuotes) {
+      var that = this;
+      this.getStockPrices(portfolio, function() {
+        that.rebalancePortfolio(portfolio);
+      });
+    } else {
+      this.rebalancePortfolio(portfolio);
+    }
+  },
+
+  getStockPrices: function(portfolio, callback) {
+    if (portfolio.length) {
+      var count = 0;
+      portfolio.forEach(function(stock) {
+        request('http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' + stock.ticker, function(error, response, body) {
+          if (!error && response.statusCode == 200) {
+            var data = JSON.parse(body);
+            stock.price = data.LastPrice;
+            count++;
+            if (count === portfolio.length)
+              callback();
+          }
+        });
+      });
+    }
   },
 
   rebalancePortfolio: function(portfolio) {
