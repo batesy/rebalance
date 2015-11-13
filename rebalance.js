@@ -5,7 +5,7 @@ var rb = require('./RebalanceModule').RebalanceModule;
 var portfolio = require('./portfolio').Portfolio;
 
 var options = {
-  getLiveQuotes: true
+  getLiveQuotes: false
 }
 
 rebalance(portfolio, options);
