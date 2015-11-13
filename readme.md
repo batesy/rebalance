@@ -18,7 +18,7 @@ Each stock you add should be an object with the following properties:
 If you would like to provide the price for each stock, set the `getLiveQuotes` option to false. If set to true, the module will poll Markit On Demand for the latest prices and ignore the price set in `portfolio.js`.
 
 ##Usage
-Run `node rebalance.js`
+Run `node rebalance`
 
 ##Reasoning
 Having been using Node and Angular in my current job, I decided to implement this solution in Javascript. My experience with Node is limited, so I decided to also have the script fetch live results in order to gain a better grasp on how to deal with it's asynchronous nature.
