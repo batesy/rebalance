@@ -6,8 +6,8 @@ console.log(portfolio);
 
 describe('RebalanceModule', function() {
   describe('#getPortfolioValue()', function(){
-    it('should return an integer', function() {
-      assert.equal(Number.isInteger(rb.RebalanceModule.getPortfolioValue(portfolio)), true);
+    it('should return a number', function() {
+      assert.equal(typeof rb.RebalanceModule.getPortfolioValue(portfolio), "number");
     });
     it('should return 10000', function() {
       assert.equal(rb.RebalanceModule.getPortfolioValue(portfolio), 10000);
