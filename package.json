@@ -1,0 +1,15 @@
+{
+  "name": "wealthsimple",
+  "version": "1.0.0",
+  "description": "Wealthsimple Coding Challenge",
+  "main": "src/scripts/rebalance.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "request": "^2.65.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Greg Bates"
+}
