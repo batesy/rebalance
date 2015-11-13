@@ -2,7 +2,7 @@
   "name": "wealthsimple",
   "version": "1.0.0",
   "description": "Wealthsimple Coding Challenge",
-  "main": "src/scripts/rebalance.js",
+  "main": "rebalance.js",
   "dependencies": {
     "request": "^2.65.0"
   },
